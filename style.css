@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(rgba(12, 155, 211),rgba(235, 252 , 2 , 0.8), rgba(12, 155, 211));
+    height: 100vh;
+    text-transform: uppercase;
+}
+video{
+    width: 100%;
+    height: 120vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -20;
+}
+.container{
+    perspective: 1000px;
+}
+.card{
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    transition: .2s;
+    transform-style: preserve-3d;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.block{
+    position: absolute;
+    top: 200px;
+    right: 600px;
+    perspective: 800px;
+}
+.outside,.inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+.outside{
+    background-color: blanchedalmond;
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.outside h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: salmon;
+    margin-bottom: 30px;
+
+}
+.outside, .inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+.inside{
+    background-color: rgb(255,244,79);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.inside h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.inside img{
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.frame{
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(250, 234, 8, 0.815);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.8rem;
+    transform: rotateY(-230deg) rotateX(20deg);
+    position: absolute;
+}
+.frame img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.frame p{
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+}
+.frame:nth-child(1){
+    top: -110px;
+    z-index: -1;
+    background-color: coral;
+}
+.frame:nth-child(2){
+    background-color: goldenrod;
+}
+.frame:nth-child(3){
+    top: 100px;
+    background-color: burlywood;
+}
